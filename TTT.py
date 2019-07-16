@@ -33,8 +33,7 @@ def player_input():
     marker = ''
     
     while not (marker == 'X' or marker == 'O'):
-        marker = input('Player 1: Do you want to be X or O? ').upper()
-# WHY DOES IT ONLY ALLOW ME TO PROCEED WHEN I SELECT X?
+        marker = input('Player 1: Do you want to be x or o? ').upper()
     if marker == 'X':
         return ('X', 'O')
     else:
