@@ -2,10 +2,11 @@
 # Step 1: Write a function that can print out a board. 
 # Set up your board as a list, where each index 1-9 corresponds with a number on a number pad, 
 # so you get a 3 by 3 board representation.
-from IPython.display import clear_output
+# from IPython.display import clear_output
+# COMMENTED OUT TEST FUNCTIONS AND JUPYTER SPECIFIC COMMANDS
 
 def display_board(board):
-    clear_output()  # Remember, this only works in jupyter!
+    # clear_output()  # Remember, this only works in jupyter!
     
     print('   |   |')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
@@ -33,16 +34,16 @@ def player_input():
     
     while not (marker == 'X' or marker == 'O'):
         marker = input('Player 1: Do you want to be X or O? ').upper()
-
+# WHY DOES IT ONLY ALLOW ME TO PROCEED WHEN I SELECT X?
     if marker == 'X':
         return ('X', 'O')
     else:
         return ('O', 'X')
 
 #%%
-# TEST Step 2: run the function to make sure it returns the desired output
+# # TEST Step 2: run the function to make sure it returns the desired output
 
-player_input()
+# player_input()
 
 #%%
 # Step 3: Write a function that takes in the board list object, a marker ('X' or 'O'), and a desired position (number 1-9) and assigns it to the board
@@ -50,9 +51,9 @@ def place_marker(board, marker, position):
     board[position] = marker
     
 #%%
-# TEST Step 3: run the place marker function using test parameters and display the modified board
-place_marker(test_board,'$',8)
-display_board(test_board)
+# # TEST Step 3: run the place marker function using test parameters and display the modified board
+# place_marker(test_board,'$',8)
+# display_board(test_board)
 
 #%%
 # Step 4: Write a function that takes in a board and checks to see if someone has won.
@@ -69,9 +70,9 @@ def win_check(board,mark):
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
 
 #%%
-# TEST Step 4: run the win_check function against our test_board - it should return True
+# # TEST Step 4: run the win_check function against our test_board - it should return True
 
-win_check(test_board,'X')
+# win_check(test_board,'X')
 
 #%%
 # Step 5: Write a function that uses the random module to randomly decide which player goes first. You may want to lookup random.randint() Return a string of which player went first.
